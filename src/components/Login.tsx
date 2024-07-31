@@ -11,7 +11,7 @@ const Login: React.FC = () => {
       <div className="login-container">
         <div className="login-box">
           <h2>Create a new account</h2>
-          <a href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:5173/dashboard">
+          <a href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://reachinbox-lac.vercel.app/dashboard">
             <button className="google-signup-button">
               <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo" />
               Sign Up with Google
@@ -19,7 +19,7 @@ const Login: React.FC = () => {
           </a>
           <button className="create-account-button">Create an Account</button>
           <p>
-            Already have an account? <a href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:5173/dashboard"><span>Sign In</span></a>
+            Already have an account? <a href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://reachinbox-lac.vercel.app/dashboard"><span>Sign In</span></a>
           </p>
         </div>
       </div>
