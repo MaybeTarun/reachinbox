@@ -1,1 +1,3 @@
 # reachinbox
+
+npm run dev
