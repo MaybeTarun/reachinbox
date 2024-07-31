@@ -13,11 +13,8 @@ import downarrow from './../assets/downarrow.svg';
 import moon from './../assets/moon.svg';
 import sun from './../assets/sun.svg';
 import nomsg from './../assets/nomsg.png';
-import { SignedIn, UserButton, UserProfile, useUser } from '@clerk/clerk-react';
-import { Navigate } from 'react-router-dom';
 
 const Onebox: React.FC = () => {
-  const { isSignedIn } = useUser();
   const [isSunActive, setIsSunActive] = useState(false);
   const [showUserProfile, setShowUserProfile] = useState(false);
 
@@ -29,12 +26,7 @@ const Onebox: React.FC = () => {
     setShowUserProfile(!showUserProfile);
   };
 
-  if (!isSignedIn) {
-    return <Navigate to="/" />;
-  }
-
   return (
-    <SignedIn>
       <div className={`onebox-container ${isSunActive ? 'light-mode' : 'dark-mode'}`}>
         <aside className="sidebar">
           <div className="logo">
@@ -50,7 +42,7 @@ const Onebox: React.FC = () => {
             <a href="#" className="nav-item"><img src={icon7} alt='icon' /></a>
           </nav>
           <div className="profile">
-            <UserButton />
+            AS
           </div>
         </aside>
         <main className="main-content">
@@ -63,7 +55,7 @@ const Onebox: React.FC = () => {
                 <img src={sun} alt="light" className="sun" />
               </div>
               <div className="workspace">
-                <span>tim Workspace</span>
+                <span>Tim's Workspace</span>
                 <button className="workspace-toggle" onClick={toggleUserProfile}>
                   <img src={downarrow} alt="toggle" style={{ transform: showUserProfile ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                 </button>
@@ -78,13 +70,7 @@ const Onebox: React.FC = () => {
             </div>
           </div>
         </main>
-        {showUserProfile && (
-          <div className="user-profile-overlay">
-            <UserProfile />
-          </div>
-        )}
       </div>
-    </SignedIn>
   );
 };
 
