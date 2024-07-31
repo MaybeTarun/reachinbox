@@ -32,12 +32,21 @@
 .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
 }
 
 .nav-item {
-    text-decoration: none;
-    font-size: 1.5rem;
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item:hover {
+    background-color: #2F3030;
 }
 
 .nav-item img {
@@ -47,7 +56,7 @@
 .profile {
     margin-top: auto;
     margin-bottom: 20px;
-    background-color: #333;
+    background-color: #054F31;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -139,21 +148,6 @@
     margin-left: 0.5rem;
 }
 
-.user-profile-overlay {
-    position: absolute;
-    z-index: 100;
-    bottom: 0;
-    right: 0;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 20px;
-}
-
 .empty-state {
     text-align: center;
     display: flex;
@@ -180,9 +174,222 @@
     font-weight: 500;
 }
 
-.dark-mode .onebox-container {
-    background-color: #000;
+.content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inbox {
+    width: 300px;
+    height: 100%;
+    border: 1px solid #33383F;
+    padding: 12px;
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header2 h2 {
+    color: #4285F4;
+    font-size: 20px;
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+  
+.refresh-icon {
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #25262B;
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.refresh-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+.inbox-stats {
+    margin-top: 10px;
+    color: #7F7F7F;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.inbox-stats span {
+    font-weight: bold;
+    color: white;
+}
+  
+.search-bar {
+    background-color: #23272C;
+    border: 1px solid #ffffff20;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    background-color: #23272C;
+    border: none;
     color: #fff;
+}
+
+.search-bar img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 260px;
+    height: 28px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+}
+
+.new-replies {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.circle {
+    background-color: #222426;
+    color: #5C7CFA;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.newest {
+    margin-left: auto;
+    font-size: 14px;
+}
+
+.card-container {
+    width: 300px;
+}
+
+.card {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #33383F;
+    border-top: 1px solid #33383F;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-row {
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.card-date {
+    color: #fcfcfc40;
+}
+
+.card-row2 {
+    font-size: 12px;
+    color: #E1E0E0;
+}
+
+.card-row3 {
+    font-size: 12px;
+    color: #57E0A6;
+    margin-top: 5px;
+}
+
+.card-row3 img {
+    margin-right: 5px;
+    margin-bottom: -1px;
+}
+
+.card-row3 p {    
+    background-color: #222426;
+    padding: 3px 8px;
+    border-radius: 17px;
+    width: 83px;
+    text-align: center;
+}
+
+.card p {
+    margin: 0;
+}
+
+.details {
+    width: 278px;
+    height: 100%;
+    background-color: #000;
+    border: 1px solid #353533;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.details-heading {
+    width: 268px;
+    height: auto;
+    background-color: #23272C;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.details-grid {
+    width: 264px;
+    height: 217px;
+    padding: 8px 12px 16px 12px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.grid-left {
+    font-size: 12px;
+}
+
+.gird-right {
+    font-size: 12px;
+    text-align: end;
+    text-decoration: none;
+    color: #B9B9B9;
 }
 
 .light-mode .onebox-container {
@@ -192,7 +399,7 @@
 
 .light-mode .sidebar {
     background-color: #FAFAFA;
-    color: #000;
+    /* color: #000; */
     border-color: #D8D8D8;
 }
 
@@ -217,6 +424,7 @@
 
 .light-mode .content {
     background-color: #FAFAFA;
+    color: #000;
 }
 
 .light-mode .empty-state p{
@@ -228,6 +436,93 @@
 }
 
 .light-mode .profile {
-    background-color: #E9EAEC;
     border-color: #DADEE1;
+}
+
+.light-mode .nav-item:hover {
+    background-color: #E9EAEB;
+}
+
+.light-mode body {
+    background-color: #fff;
+}
+
+.light-mode .inbox {
+    border-color: #DEDEDE;
+}
+
+.light-mode .search-bar {
+    background-color: #F4F6F8;
+    border-color: #DFE3E8;
+}
+
+.light-mode .search-bar input {
+    background-color: #F4F6F8;
+}
+
+.light-mode .search-bar img {
+    filter: invert(1);
+}
+
+.light-mode .new-replies {
+    color: #172B4D;
+}
+
+.light-mode .inbox-stats span{
+    color: #343A40;
+}
+
+.light-mode .circle {
+    background-color: #ECECEC;
+}
+
+.light-mode .arrow-icon {
+    filter: invert(1);
+}
+
+.light-mode .refresh-icon img{
+    filter: invert(1);
+}
+
+.light-mode .refresh-icon {
+    background-color: transparent;
+    border: 1px solid #DFE3E8;
+}
+
+.light-mode .card-row {
+    color: #343A40;
+}
+
+.light-mode .card-row .card-date {
+    color: #919EAB;
+}
+
+.light-mode .card-row2 {
+    color: #172B4D;
+}
+
+.light-mode .card-row3 p {
+    background-color: #F0F0F0;
+}
+
+.light-mode .card {
+    border: transparent;
+}
+
+.light-mode .details {
+    background-color: #F9F9F9;
+    border: 1px solid #DEDEDE;
+}
+
+.light-mode .details-heading {
+    background-color: #ECEFF3;
+    color: #454F5B;
+}
+
+.light-mode .grid-left {
+    color: #637381;
+}
+
+.light-mode .gird-right {
+    color: #000;
 }
